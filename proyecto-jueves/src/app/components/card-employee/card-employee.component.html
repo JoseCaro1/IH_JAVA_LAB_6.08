@@ -1,0 +1,9 @@
+<li>{{employee.name}}</li>
+<button (click)="mostrarDetalle()" >Mostrar detalles</button>
+<button (click)="borrar()">Eliminar empleado</button>
+<div *ngIf="mostrar">
+    <li>{{employee.officeNumber}}</li>
+    <li>{{employee.phoneNumber}}</li>
+    <li>{{employee.position}}</li>
+    <li>{{employee.manager}}</li>
+</div>

@@ -1,0 +1,5 @@
+<h1>Lista de empleados</h1>
+<ul>
+    <app-card-employee *ngFor="let employee of employeeList;let i = index" (eventDelete)="borrar($event)" [employee]="employee" [index]="i">
+    </app-card-employee>
+</ul>

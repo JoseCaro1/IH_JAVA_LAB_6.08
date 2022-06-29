@@ -32,7 +32,7 @@ export class ListComponent implements OnInit {
 
   borrar(index:number) {
     this.employeeService.deleteEmployee( this.employeeList.splice(index,1)[0].id).subscribe((response) => {
-     
+
     })
   }
 

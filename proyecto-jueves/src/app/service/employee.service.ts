@@ -18,6 +18,10 @@ export class EmployeeService {
     return this.http.delete<void>(`http://localhost:8080/employee/delete/${id}`)
   }
 
+  getEmployee(id:number) : Observable<Employee> {
+    return this.http.get<Employee>(`http://localhost:8080/employee/${id}`)
+  }
+
 
 }
 
@@ -39,10 +43,10 @@ export interface Employees {
  *  {}
  * ],
  * status:200}
- * 
+ *
  * result: [
  *  {},
  *  {}
  * ]
- * 
+ *
  */

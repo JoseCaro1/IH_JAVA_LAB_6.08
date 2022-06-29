@@ -25,4 +25,10 @@ public class EmployeeController {
         employeeService.deleteEmployee(id);
     }
 
+    @GetMapping("employee/{id}")
+    @CrossOrigin
+    public Employee findById(@PathVariable long id) {
+        return employeeService.findById(id);
+    }
+
 }

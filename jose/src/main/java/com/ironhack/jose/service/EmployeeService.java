@@ -25,5 +25,9 @@ public class EmployeeService {
         }
         employeeRepository.delete(employeeRepository.findById(id).get());
     }
+    public Employee findById(long id){
+        if(!employeeRepository.findById(id).isPresent()) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+      return   employeeRepository.findById(id).get();
+    }
 
 }
